@@ -1,0 +1,32 @@
+server:
+    port: 9090
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+#        url: jdbc:mysql://124.71.166.37:3306/stumansys?serverTimezone=GMT%2b8
+        url: jdbc:mysql://124.71.166.37:3306/stumansys?serverTimezone=GMT%2b8
+
+
+        username: root
+        password: root
+
+
+# springboot Swagger2
+    mvc:
+        pathmatch:
+            matching-strategy: ant_path_matcher
+
+mybatis:
+    mapper-locations: classpath:mapper/*.xml
+#  ????mapper??
+#    configuration:
+#        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+mybatis-plus:
+    configuration:
+        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+files:
+    upload:
+#        path: C:\Users\yijin\Desktop\db_project\database_project\files\
+         path: /home/files/
+
